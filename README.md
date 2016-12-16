@@ -15,9 +15,29 @@ docker run --tty --volume $(pwd)/:/opt/atlas codeclou/docker-atlassian-sdk:lates
 
 -----
 
-:bangbang: **WARN:** This can only be used in local codeclou network, since a global maven-repository mirror is set which is not available on the internet!
+:bangbang: **WARN:** This can only be used in local codeclou network, since a global maven-repository mirror is set which is not available on the internet! You must have a *[artifactory](https://www.jfrog.com/open-source/) installed somehwere* with a Virtual Repository that contains at least these Maven Repositories:
 
------
+```
+https://maven.atlassian.com/3rdparty/
+https://maven.atlassian.com/public/
+https://maven.atlassian.com/public-snapshot/
+https://repo.maven.apache.org/maven2/
+https://repo.spring.io/release
+https://repo.spring.io/milestone
+https://repo.spring.io/snapshot
+https://maven.java.net/content/groups/public/
+http://maven.jahia.org/maven2/
+```
+
+Now you can run atlas-package and override the `ENV` variable with the Maven Repository Mirror URL:
+
+```
+docker run --tty --volume $(pwd)/:/opt/atlas \
+                 -e "ENV MAVEN_REPOSITORY_MIRROR=http://yourserver:8081/artifactory/all/" \
+                 codeclou/docker-atlassian-sdk:latest atlas-package    
+```
+
+----
 
 :bangbang: IT IS NOT ADVISED TO USE THIS IMAGE DIRECTLY. CHECK THE DOCKERFILE AND CREATE YOUR OWN CUSTOM IMAGE :bangbang:
 
