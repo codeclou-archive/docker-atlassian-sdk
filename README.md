@@ -24,7 +24,7 @@ docker run \
 
 ### Mandatory Maven-Repository (Artifactory)
 
-**WARN:** You **must have an [artifactory service](https://www.jfrog.com/open-source/) (or similiar) runnning** with a Virtual Repository that mirrors at least the following **Maven Repositories**:
+**WARN:** You **must have a [JFrog Artifactory service](https://www.jfrog.com/open-source/) (or similiar) runnning** with a Virtual Repository that mirrors at least the following **Maven Repositories**:
 
 ```
 https://maven.atlassian.com/3rdparty/
