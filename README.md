@@ -1,5 +1,5 @@
 # docker-atlassian-sdk
-Docker Image to run Atlassian SDK Commands from Docker Image
+Docker Image to run Atlassian SDK Commands.
 
 ![](https://codeclou.github.io/doc/docker-warranty.svg?v5)
 
