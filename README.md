@@ -47,3 +47,4 @@ The URL to the Maven Repository Mirror is set via the `MAVEN_REPOSITORY_MIRROR` 
   * Dockerfile and Image is provided under [MIT License](https://github.com/codeclou/docker-atlassian-sdk/blob/master/LICENSE.md)
   * [Atlassian Plugin SDK](https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project) might be licensed differently. Please check for yourself.
   * [Oracle Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) might be licensed differently. Please check for yourself.
+    * Note: By using this docker image you automatically accept the License Terms of Oracle Java 8 JDK.
