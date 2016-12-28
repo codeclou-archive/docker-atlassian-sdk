@@ -3,26 +3,24 @@ FROM ubuntu:14.04
 #
 # JAVA 8
 #
-RUN sudo apt-get update
-RUN sudo apt-get -y install software-properties-common
-
-RUN sudo add-apt-repository ppa:webupd8team/java && \
-  	sudo apt-get update
-
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-RUN sudo apt-get -y install oracle-java8-set-default && \
-	sudo apt-get clean
+RUN sudo apt-get update && \
+    sudo apt-get -y install software-properties-common && \
+    sudo add-apt-repository ppa:webupd8team/java && \
+    sudo apt-get update && \
+    echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 select true' | sudo /usr/bin/debconf-set-selections && \
+    sudo apt-get -y install oracle-java8-set-default && \
+    sudo apt-get clean
 
 #
 # ATLASSIAN SDK
 #
 RUN apt-get update && \
-  	sudo apt-get install apt-transport-https &&\
-  	echo "deb https://sdkrepo.atlassian.com/debian/ stable contrib" >>/etc/apt/sources.list && \
-  	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B07804338C015B73 && \
-  	sudo apt-get update && \
-  	sudo apt-get install atlassian-plugin-sdk && \
-	apt-get clean
+    sudo apt-get install apt-transport-https &&\
+    echo "deb https://sdkrepo.atlassian.com/debian/ stable contrib" >>/etc/apt/sources.list && \
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B07804338C015B73 && \
+    sudo apt-get update && \
+    sudo apt-get install atlassian-plugin-sdk && \
+    apt-get clean
 
 #
 # WORKDIR (WILL BE MOUNTED AS VOLUME)
