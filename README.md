@@ -1,6 +1,6 @@
 # docker-atlassian-sdk
 
-[![](https://codeclou.github.io/doc/badges/generated/docker-image-size-323.svg)](https://hub.docker.com/r/codeclou/docker-atlassian-sdk/tags/) [![](https://codeclou.github.io/doc/badges/generated/docker-from-alpine-3.5.svg)](https://alpinelinux.org/) [![](https://codeclou.github.io/doc/badges/generated/docker-run-as-non-root.svg)](https://docs.docker.com/engine/reference/builder/#/user)
+[![](https://codeclou.github.io/doc/badges/generated/docker-image-size-323.svgv2)](https://hub.docker.com/r/codeclou/docker-atlassian-sdk/tags/) [![](https://codeclou.github.io/doc/badges/generated/docker-from-alpine-3.5.svg)](https://alpinelinux.org/) [![](https://codeclou.github.io/doc/badges/generated/docker-run-as-non-root.svg)](https://docs.docker.com/engine/reference/builder/#/user)
 
 Docker-Image to run [Atlassian Pugin SDK](https://developer.atlassian.com/display/DOCS/Getting+Started) Commands.
 Includes [Oracle Java 8 JDK](https://www.oracle.com/java/) and [glibc](https://github.com/sgerrand/alpine-pkg-glibc).
