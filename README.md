@@ -33,7 +33,7 @@ docker run \
     atlas-package
 ```
 
-Run a certain JIRA© Version standalone for testing. (Note: On macOS it might ve very slow to use VOLUME)
+Run a certain JIRA© Version standalone for testing. (Note: On macOS it might be very slow to use VOLUME)
 
 ```
 docker run \
