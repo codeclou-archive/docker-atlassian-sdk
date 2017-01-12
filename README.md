@@ -33,7 +33,7 @@ docker run \
     atlas-package
 ```
 
-Run a certain JIRA Version standalone for testing.
+Run a certain JIRA© Version standalone for testing.
 ```
 docker run \
     -i -t \
