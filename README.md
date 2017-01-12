@@ -42,7 +42,7 @@ docker run \
     -e MAVEN_REPOSITORY_MIRROR="http://build-local.codeclou.io:8081/artifactory/all/" \
     codeclou/docker-atlassian-sdk:latest \
     atlas-run-standalone --version 7.3.0 --product jira --http-port 2990  \
-                         --jvmargs -Xmx4096M --atlassian.upm.on.demand=true -DskipAllPrompts=true
+                         --jvmargs -Xmx4096M -DskipAllPrompts=true
 ```
 
 -----
