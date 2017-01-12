@@ -33,7 +33,8 @@ docker run \
     atlas-package
 ```
 
-Run a certain JIRA© Version standalone for testing.
+Run a certain JIRA© Version standalone for testing. (Note: On macOS it might ve very slow to use VOLUME)
+
 ```
 docker run \
     -i -t \
@@ -41,9 +42,11 @@ docker run \
     --volume $(pwd)/:/opt/atlas \
     -e MAVEN_REPOSITORY_MIRROR="http://build-local.codeclou.io:8081/artifactory/all/" \
     codeclou/docker-atlassian-sdk:latest \
-    atlas-run-standalone --version 7.3.0 --product jira --http-port 2990  \
+    atlas-run-standalone --version 7.3.0 --product jira --http-port 2990 --server 0.0.0.0 \
                          --jvmargs -Xmx4096M -DskipAllPrompts=true
 ```
+
+Then go to http://localhost:2990/jira/
 
 -----
 
