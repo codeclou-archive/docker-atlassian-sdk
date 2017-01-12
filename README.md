@@ -32,7 +32,18 @@ docker run \
     codeclou/docker-atlassian-sdk:latest \
     atlas-package
 ```
-   
+
+Run a certain JIRA Version standalone for testing.
+```
+docker run \
+    -i -t \
+    -p 2990:2990 \
+    --volume $(pwd)/:/opt/atlas \
+    -e MAVEN_REPOSITORY_MIRROR="http://build-local.codeclou.io:8081/artifactory/all/" \
+    codeclou/docker-atlassian-sdk:latest \
+    atlas-run-standalone --version 7.3.0 --product jira --http-port 2990  \
+                         --jvmargs -Xmx4096M --atlassian.upm.on.demand=true -DskipAllPrompts=true
+```
 
 -----
 
