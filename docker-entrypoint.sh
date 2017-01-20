@@ -2,6 +2,8 @@
 
 set -e
 
+umask u+rxw,g+rwx,o-rwx
+
 if [ "$MAVEN_REPOSITORY_MIRROR" != "false" ]
 then
     echo ">> DOCKER-ENTRYPOINT: INJECTING MAVEN REPOSITORY MIRROR WITH URL: ${MAVEN_REPOSITORY_MIRROR}"
