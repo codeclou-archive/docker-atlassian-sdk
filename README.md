@@ -31,6 +31,14 @@ docker run \
     --volume $(pwd)/:/opt/atlas \
     codeclou/docker-atlassian-sdk:latest \
     atlas-package
+
+## OR
+
+docker run \
+    -i -t \
+    --volume $(pwd)/:/opt/atlas \
+    codeclou/docker-atlassian-sdk:sdk-6.2.14 \
+    atlas-package
 ```
 
 Run a certain JIRA© Version standalone for testing. (Note: On macOS it might be very slow to use VOLUME)
