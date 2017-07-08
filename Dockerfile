@@ -1,4 +1,4 @@
-FROM codeclou/docker-oracle-jdk:8u121
+FROM codeclou/docker-oracle-jdk:8u131
 
 ENV ATLS_VERSIN 6.2.14
 ENV ATLS_SHA512 48ad1d0c8ee725ee0e6753231e061ac04da54167797429d39ed8a4815b6705d0fc643794bf767809d819fc22039fe8923e8a94bb9aa3bf2a6e32a25f53039153
@@ -9,6 +9,13 @@ ENV ATLS_SHA512 48ad1d0c8ee725ee0e6753231e061ac04da54167797429d39ed8a4815b6705d0
 RUN apk add --no-cache \
             bash \
             ca-certificates \
+            http-parser \
+            libcrypto1.0 \
+            libssl1.0 \
+            libstdc++ \
+            libuv \
+            musl \
+            zlib \
             curl \
             gzip \
             tar && \
